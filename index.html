@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Apply For New Account</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<title> Account Details</title>
+</head>
+<body>
+
+<form action="" method="post">
+	<div class="container">
+	<h1> Account Details</h1>
+     <hr>
+	<b>Select Account Type:-</b>	
+	<select name="account_type" class="forsel">
+    <option value="Saving">Saving</option>
+    <option value="Current">Current</option>
+    <option value="Salary">Salary</option>
+    
+  </select>
+	<br>
+	<br>
+	<br>
+	<label for="last_name"><b>Last Name</b></label>
+    <input type="text" name="last_name" placeholder="Enter Your Last Name*" maxlength="10" required>
+    
+	<label for="first_name"><b>First Name</b></label>
+	<input type="text" name="first_name" placeholder="Enter Your First Name*" maxlength="10" required><br>
+		
+	<b>DOB</b>: <input type="date" name="birth_date"> <br>
+	<br>
+	<b>E-mail:</b> <input type="email" name="email_address" placeholder="Enter Your Email*" maxlength="50" required><br>
+	<br>
+	<label for="mobile_number"><b>Mobile Number</b></label>
+    <input type="text" name="mobile_number" placeholder="Enter Your Mobile Number*" onkeypress="isInputNumber(event)" maxlength="10" required><br>
+    <script >
+    	function isInputNumber(evt) {
+			var ch = String.fromCharCode(evt.which);
+			if(!(/[0-9]/.test(ch))){
+				evt.preventDefault();
+			}
+		}
+    </script>  
+    <br>
+    
+    <label for="city"><b>City</b></label>
+    <input type="text" name="city" placeholder="Enter Your City*" required><br>
+    
+    <label for="state"><b>State</b></label>
+    <input type="text" name="state" placeholder="Enter Your State*" maxlength="15" required><br>
+       
+    <label for="pincode"><b>PIN CODE</b></label>
+    <input type="text" name="pin_code" placeholder="Enter Your PIN CODE*" onkeypress="isInputNumber(event)" maxlength="6" required><br>
+    
+    <label for="aadhar"><b>AADHAR</b></label>
+    <input type="text" name="aadhar_number" placeholder="Enter Your AADHAR NUMBER*" onkeypress="isInputNumber(event)" maxlength="12" required><br>
+     <hr>
+    <input type="submit" value="submit" class="submitbt" > 
+
+    </div>
+	
+	</form>
+</body> 
+</html>
